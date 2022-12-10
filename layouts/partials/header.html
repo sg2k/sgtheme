@@ -21,8 +21,14 @@
 	{{- template "_internal/schema.html" . -}}
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/twitter_cards.html" . -}}
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
+	{{ $cssmain := resources.Get "css/main.css" }}
+	{{ $cssnormalize := resources.Get "css/normalize.css" }}
+	{{ $csshighlight := resources.Get "css/highlight.css" }}
+	{{ $cssdark := resources.Get "css/dark.css" | minify | fingerprint "sha512" }}
+	{{ $allcss := slice $cssnormalize $cssmain $csshighlight | resources.Concat "css/vendor.css" | minify | fingerprint "sha512" }}
+	<link rel="stylesheet" href="{{ $allcss.RelPermalink }}" integrity="{{ $allcss.Data.Integrity }}">
+	<link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ $cssdark.RelPermalink }}" integrity="{{ $cssdark.Data.Integrity }}"/>
+	
 	{{- if isset .Site.Params "customcss" }}
 		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customCSS }}" />
 	{{ end }}
