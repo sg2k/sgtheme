@@ -200,6 +200,7 @@ ul.flat li {
     background-color: transparent!important;
     color: #666;
     font-size: .9rem;
+    white-space: pre-line;
     font-family: monospace
 }
 
