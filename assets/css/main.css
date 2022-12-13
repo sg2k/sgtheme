@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap);
 
 body {
-    font-family: "Roboto Slab",serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 400;
     color: #000;
     line-height: 1.5rem;
@@ -19,7 +19,12 @@ a:hover {
     border-bottom: 2px solid #09c
 }
 
-.header nav.social a,button,html,input,select,textarea {
+.header nav.social a,
+button,
+html,
+input,
+select,
+textarea {
     color: #333
 }
 
@@ -35,12 +40,14 @@ a:hover {
     color: #fff
 }
 
-fieldset,hr {
+fieldset,
+hr {
     border: 0;
     padding: 0
 }
 
-hr,img {
+hr,
+img {
     display: block
 }
 
@@ -63,7 +70,8 @@ figure {
     text-align: center
 }
 
-fieldset,figure {
+fieldset,
+figure {
     margin: 0
 }
 
@@ -76,7 +84,8 @@ table {
     width: 100%
 }
 
-table td,table th {
+table td,
+table th {
     border-bottom: 1px solid #dee2e6;
     padding: .75rem;
     vertical-align: top
@@ -92,7 +101,7 @@ table tbody+tbody {
 }
 
 table tbody tr:nth-of-type(even) {
-    background-color: rgba(0,0,0,.15)
+    background-color: rgba(0, 0, 0, .15)
 }
 
 table th {
@@ -109,7 +118,7 @@ blockquote {
     margin-left: 1rem;
     font-style: italic;
     font-size: 1.4rem;
-    font-family: Georgia,bitstream charter,serif;
+    font-family: Georgia, bitstream charter, serif;
     border-left: 3px solid;
     border-color: #3700ff;
     padding-left: 20px
@@ -124,7 +133,12 @@ blockquote em {
     font-weight: 600
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #8c001a;
     font-weight: 400;
     line-height: 1em;
@@ -197,7 +211,7 @@ ul.flat li {
 .highlight pre {
     margin: 0;
     padding: 5px;
-    background-color: transparent!important;
+    background-color: transparent !important;
     color: #666;
     font-size: .9rem;
     white-space: pre-line;
@@ -228,23 +242,23 @@ ul.flat li {
 
 .header .avatar {
     float: left;
-    margin: 0 20px 0 0
+    margin: 0px 20px 0px 0px
 }
 
 .header .avatar img {
     width: 64px;
     height: 64px;
     overflow: hidden;
-    border-radius: 100%
+    border-radius: 100%;
 }
 
 .header .site-title {
-    margin: 0
+    margin-bottom: 0
 }
 
 .site-title a {
     color: #1f1b16;
-    text-decoration: none!important
+    text-decoration: none !important
 }
 
 .site-title a:hover {
@@ -253,7 +267,8 @@ ul.flat li {
 
 .header .site-description {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .header .site-description p {
@@ -267,12 +282,14 @@ ul.flat li {
     border-bottom: 1px solid #09c
 }
 
-.header nav ul,ul.flat {
+.header nav ul,
+ul.flat {
     margin: 0;
     padding: 0
 }
 
-.header nav li,.pagination li {
+.header nav li,
+.pagination li {
     padding: 0;
     display: inline-block;
     list-style: none;
@@ -341,7 +358,7 @@ ul.flat li {
 }
 
 .post-header .meta .date .day {
-    font-family: "Playfair Display",serif;
+    font-family: "Playfair Display", serif;
     font-weight: 700;
     line-height: .45em;
     font-size: 3em;
@@ -366,7 +383,8 @@ ul.flat li {
     margin-bottom: 30px
 }
 
-.post .draft-label,.post .tags a {
+.post .draft-label,
+.post .tags a {
     color: #3700ff;
     text-decoration: none
 }
@@ -401,7 +419,8 @@ ul.flat li {
     padding: 15px 0
 }
 
-.footer,.footer a {
+.footer,
+.footer a {
     color: #333
 }
 
@@ -429,7 +448,9 @@ ul.flat li {
     padding-right: 20px
 }
 
-.pagination,.pagination .page-item.page-prev,figcaption {
+.pagination,
+.pagination .page-item.page-prev,
+figcaption {
     text-align: left
 }
 
@@ -520,4 +541,28 @@ code:not(pre *) {
     background-color: #ccc;
     border-radius: 5px;
     border: 1px solid #666
+}
+
+h1 {
+    font-size: 1.6rem
+}
+
+h2 {
+    font-size: 1.3rem
+}
+
+h3 {
+    font-size: 1.1rem
+}
+
+h4 {
+    font-size: 1rem
+}
+
+h5 {
+    font-size: .9rem
+}
+
+h6 {
+    font-size: .8rem
 }
