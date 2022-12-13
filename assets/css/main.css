@@ -201,6 +201,7 @@ ul.flat li {
     color: #666;
     font-size: .9rem;
     white-space: pre-line;
+    overflow: auto;
     font-family: monospace
 }
 
