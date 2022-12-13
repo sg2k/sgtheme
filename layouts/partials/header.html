@@ -26,20 +26,19 @@
 	
 	{{ $cssmain := resources.Get "css/main.css" }}
 	{{ $cssnormalize := resources.Get "css/normalize.css" }}
-	{{ $csshighlight := resources.Get "css/highlight.css" }}
-	{{ $cssdark := resources.Get "css/dark.css" | minify | fingerprint "sha512" }}
+	{{ $csshighlight := resources.Get "css/highlight_lg.css" }}
+	{{ $cssdark := resources.Get "css/dark.css"  }}
+	{{ $highlight_dk := resources.Get "css/highlight_dk.css" }}
+
 	{{ $allcss := slice $cssnormalize $cssmain $csshighlight | resources.Concat "css/vendor.css" | minify | fingerprint "sha512" }}
-	<link rel="stylesheet" href="{{ $allcss.RelPermalink }}" integrity="{{ $allcss.Data.Integrity }}">
-	<link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ $cssdark.RelPermalink }}" integrity="{{ $cssdark.Data.Integrity }}"/>
+	{{ $alldark := slice $cssdark $highlight_dk | resources.Concat "css/vendordk.css" | minify | fingerprint "sha512" }}
+
+	<link rel="stylesheet" type="text/css" href="{{ $allcss.RelPermalink }}" integrity="{{ $allcss.Data.Integrity }}">
+	<link id="dark-scheme" rel="stylesheet" href="{{ $alldark.RelPermalink }}" integrity="{{ $alldark.Data.Integrity }}">
 	
 	{{- if isset .Site.Params "customcss" }}
 		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customCSS }}" />
 	{{ end }}
-
-{{/*        <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" />
-        {{- if isset .Site.Params "customdarkcss" }}
-                <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
-        {{- end }} */}}
 
 	{{ if and (isset .Site.Params "social") (isset .Site.Params "feathericonscdn") (eq .Site.Params.featherIconsCDN true) -}}
 		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
