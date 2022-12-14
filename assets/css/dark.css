@@ -1,19 +1,19 @@
 html.dark body {
-  background-color: #161925;
-  color: #ececec
+  background-color: #2c2c2c;
+  color: #f6efef
 }
 
 html.dark hr {
-  border-color: #1a8ca2
+  border-color: #46ce6a
 }
 
 html.dark blockquote {
-  border-color: #ececec
+  border-color: #f6efef
 }
 
 html.dark a:hover,
 html.dark a {
-  color: #1a8ca2;
+  color: #46ce6a;
   text-decoration: none
 }
 
@@ -23,7 +23,7 @@ html.dark table tbody tr:nth-of-type(even) {
 
 html.dark .site-description a,
 html.dark .site-description a:hover {
-  color: #ececec;
+  color: #f6efef;
   text-decoration: underline
 }
 
@@ -32,18 +32,18 @@ html.dark a:hover {
 }
 
 html.dark .post-tags .tags a {
-  border: 1px solid #ececec;
-  color: #ececec
+  border: 1px solid #f6efef;
+  color: #f6efef
 }
 
 html.dark .site-title a {
-  color: #1a8ca2;
+  color: #46ce6a;
   text-decoration: none !important
 }
 
 html.dark .header nav {
-  border-bottom: 1px solid #1a8ca2;
-  border-top: 1px solid #1a8ca2
+  border-bottom: 1px solid #46ce6a;
+  border-top: 1px solid #46ce6a
 }
 
 html.dark .header nav.social {
@@ -51,8 +51,8 @@ html.dark .header nav.social {
 }
 
 html.dark .footer {
-  border-top: 1px solid #1a8ca2;
-  color: #ececec
+  border-top: 1px solid #46ce6a;
+  color: #f6efef
 }
 
 html.dark .post-header .meta .date,
@@ -63,5 +63,21 @@ html.dark h4,
 html.dark h5,
 html.dark h6,
 .dark .header * {
-  color: #1a8ca2
+  color: #46ce6a
+}
+
+html.dark code:not(pre *) {
+  background-color: #f6efef;
+  color: #2c2c2c;
+}
+
+html.dark .highlight pre {
+  background-color: #f6efef;
+  color: #2c2c2c;
+}
+
+html.dark .chroma .hl {
+  background-color: #2c2c2c;
+  color: #f6efef;
+  padding: 2px;
 }
